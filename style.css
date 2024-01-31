@@ -1,0 +1,9 @@
+#result li button {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#result li:hover button {
+  display: inline-block;
+  opacity: 1;
+}
