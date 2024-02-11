@@ -13,6 +13,7 @@ body {
 }
 
 .bigger-box {
+  position: relative;
   width: 1200px;
   height: 900px;
   border: solid aliceblue;

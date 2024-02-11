@@ -1,5 +1,5 @@
 const box = document.querySelector(".box");
-const box2 = document.querySelector(".box2");
+const box2 = document.querySelector(".bigger-box");
 
 box.style.backgroundColor = "salmon";
 box.style.height = "50px";
@@ -9,6 +9,7 @@ box.style.position = "absolute";
 box.style.top = "300px";
 box.style.left = "850px";
 
+//PLAYER 2
 // box2.style.backgroundColor = "blue";
 // box2.style.height = "50px";
 // box2.style.width = "50px";
@@ -17,7 +18,7 @@ box.style.left = "850px";
 // box2.style.top = "300px";
 // box2.style.left = "800px";
 
-document.addEventListener("keydown", (e) => {
+window.addEventListener("keydown", (e) => {
   //Make string to numbers
   let top = parseInt(box.style.top);
   let left = parseInt(box.style.left);
@@ -42,17 +43,14 @@ document.addEventListener("keydown", (e) => {
   box.style.top = top + "px";
   box.style.left = left + "px";
 
-  restriction();
-
   console.log(e.key);
 });
 
-document.addEventListener("mousedown", function (e) {
+box2.addEventListener("mousedown", function (e) {
   // On the mouse
   const mouseX = e.clientX;
   const mouseY = e.clientY;
 
-  box.style.left = mouseX + "px";
-  box.style.top = mouseY + "px";
-  console.log(e);
+  box.style.left = `${mouseX - parseInt(box.style.width) / 2}px`;
+  box.style.top = `${mouseY - parseInt(box.style.height) / 2}px`;
 });
